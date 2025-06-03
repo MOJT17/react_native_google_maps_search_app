@@ -15,19 +15,12 @@ import { API_KEY } from "@env";
 const map = () => {
   const [isFocused, setIsFocused] = useState(false)
   const [Addrees, setAddress] = useState("");
-  // console.log(API_KEY)
   return (
     
     <ThemedView style={styles.container}>
-
-    {/* //   <ThemedText title={true} style={styles.heading}>
-    //     Add a New Book
-    //   </ThemedText>
-    //   <Spacer /> */}
     
     <GooglePlacesAutocomplete
           fetchDetails={true}
-          // placeholder="Search"
           onPress={(data, details = null) => {
             setAddress(details.description);
             console.log(data, details, details.description);
@@ -50,6 +43,8 @@ const map = () => {
           // keyboardShouldPersistTaps='handled'
 
           placeholder='Search for a Location'
+
+
 	// textInputProps={{ placeholderTextColor: '#000' }}
 	// styles={{ textInput: { fontSize: 16 } }}
 	// onPress={(data, details = null) => { console.log(data, details); }}
@@ -57,7 +52,6 @@ const map = () => {
 	// 	key: API_KEY,
 	// 	language: 'en',
 	// }}
-	
 	enablePoweredByContainer={false}
 	// predefinedPlaces={[]}
 	autoFillOnNotFound={false}
@@ -115,12 +109,6 @@ const map = () => {
     />
 
     </ThemedButton>
-  {/* // <Pressable 
-  //   onPress={() => Alert.alert('Button pressed')}
-  //   title='1'
-  //   style={{ width: '50%', height: 50, zIndex: 1, paddingLeft: '5%' }}
-    
-  // /> */}
   
 
   </ThemedView>
@@ -133,8 +121,6 @@ export default map
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
   },
   heading: {
     fontWeight: "bold",
