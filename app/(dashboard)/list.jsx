@@ -15,22 +15,6 @@ const ListScreen = () => {
       </ThemedText>
       <Spacer />
 
-{/* <GooglePlacesAutocomplete
-        {...defaultProps}
-        fetchDetails
-        filterReverseGeocodingByTypes={['establishment', 'street_address']}
-        GooglePlacesDetailsQuery={detailsQuery}
-        onPress={handlePlaceSelect}
-        placeholder={t('search')}
-        query={query}
-        ref={input}
-        styles={autocompleteStyles}
-
-        
-      /> */}
-
-
-
     </ThemedView>
   )
 }
@@ -40,7 +24,6 @@ export default ListScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: "center",
     alignItems: "stretch",
   },
   heading: {
